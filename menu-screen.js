@@ -7,8 +7,14 @@ class MenuScreen {
     // TODO(you): Implement the constructor and add fields as necessary.
     this.menuContainer=menuContainer;
     this.selectContainer=menuContainer.querySelector("#song-selector");
+    this.inputContainer=menuContainer.querySelector("#query-input");
     this.songList={};
+    this.themeList=['candy', 'charlie brown', 'computers', 'dance', 'donuts', 'hello kitty', 'flowers', 'nature', 'turtles', 'space'];
+
     this._loadSongs(this.selectContainer);
+    this.inputContainer.value=this.themeList[
+      Math.floor(Math.random()*this.theme.length)
+    ];
   }
   // TODO(you): Add methods as necessary.
   _loadSongs(selectContainer) {
