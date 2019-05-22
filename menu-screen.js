@@ -41,6 +41,6 @@ class MenuScreen {
   }
 
   _Submit(){
-    document.dispatchEvent(new CustomEvent('toMusic',{detail: {gifValue:this.inputContainer.value}}));
+    document.dispatchEvent(new CustomEvent('toMusic'));
   }
 }
