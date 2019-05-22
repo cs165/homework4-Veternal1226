@@ -19,8 +19,7 @@ class GifDisplay {
 
     this.ChangeGif(this.foreGif);
     this.ChangeGif(this.backGif);
-    //this.load();
-    //this.gif.style.backgroundImage="url("+this.imgURL[0]+")";
+
   }
   // TODO(you): Add methods as necessary.
 
@@ -46,10 +45,4 @@ class GifDisplay {
     this.backGif.classList.toggle("inactive");
   }
 
-  /*load(){
-    for(var i=0;i<this.imgURL.length;i++){
-      const image=new Image();
-      image.src=this.imgURL[i];
-    }
-  }*/
 }

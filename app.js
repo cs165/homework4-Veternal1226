@@ -32,7 +32,7 @@ class App {
       let imgURLlist=[];
       if(json.data.length>2){
         for(let index in json.data) {
-          const dumpImg=new Image();
+          const dumpImg=new Image();//preload,but useless!?
           const tempImg=json.data[index].images.downsized.url;
           dumpImg.src=tempImg;
           imgURLlist.push(tempImg);
