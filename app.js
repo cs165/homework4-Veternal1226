@@ -28,7 +28,7 @@ class App {
     this.musicContainer.classList.remove("inactive");
 
     const URL="https://api.giphy.com/v1/gifs/search?q="+encodeURIComponent(event.detail.gifTag)+"&limit=25&rating=g&api_key=uB40y44EIrfKI9v4rqFflBb5b63dG4Nq";
-    //teacher's key:dc6zaTOxFJmzC
+    //teacher's key:dc6zaTOxFJmzC (sometimes unavailable:API rate limit exceeded)
     //my key:uB40y44EIrfKI9v4rqFflBb5b63dG4Nq
     const onJsonReady=(json)=>{
       let imgURLlist=[];
