@@ -50,7 +50,7 @@ class MenuScreen {
   _onSubmit() {
     this.formElement.addEventListener('submit', event => {
       event.preventDefault();
-      document.dispatchEvent(new CustomEvent("Fetching", {
+      document.dispatchEvent(new CustomEvent("ToMusic", {
         detail: {
           songValue: this.selectContainer.options[this.selectContainer.selectedIndex].value,
           gifValue: this.inputContainer.value
