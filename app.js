@@ -5,6 +5,8 @@
 class App {
   constructor() {
     // TODO(you): Implement the constructor and add fields as necessary.
+    const menuContainer=document.querySelector("#menu");
+    this.menuScreen=new MenuScreen(menuContainer);
   }
   // TODO(you): Add methods as necessary.
 }
