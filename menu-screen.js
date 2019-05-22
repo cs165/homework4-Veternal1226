@@ -40,7 +40,8 @@ class MenuScreen {
     }
   }
 
-  _Submit(){
+  _Submit(event){
+    event.preventDefault();
     document.dispatchEvent(new CustomEvent('toMusic'));
   }
 }
