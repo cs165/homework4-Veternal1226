@@ -25,7 +25,7 @@ class App {
     this.menuContainer.classList.add("inactive");
     this.musicContainer.classList.remove("inactive");
 
-    const URL = "https://api.giphy.com/v1/gifs/search?q=" + encodeURIComponent(event.detail.gifValue) + "&api_key=FjJaTP04iY5rAwcEASKET51wyx9VZ2V8&limit=25&rating=g";
+    const URL = "https://api.giphy.com/v1/gifs/search?q=" + encodeURIComponent(event.detail.gifValue) + "&limit=25&rating=g&api_key=dc6zaTOxFJmzC";
     const onJsonReady = (json) => {
       let imgURL = [];
       if(json.data.length > 2) {
@@ -48,9 +48,8 @@ class App {
 
   }
 
-  ToMenu(event){
-    console.log('2');
+  /*ToMenu(event){
     this.menuContainer.classList.remove("inactive");
     this.musicContainer.classList.add("inactive");
-  }
+  }*/
 }
