@@ -12,9 +12,11 @@ class MenuScreen {
     this.songList={};
     this.themeList=['candy', 'charlie brown', 'computers', 'dance', 'donuts', 'hello kitty', 'flowers', 'nature', 'turtles', 'space'];
 
-    //this.formContainer.addEventListener("submit",this._Submit);
+    this._Submit=this._Submit.bind(this);
 
-    this._onSubmit();
+    this.formContainer.addEventListener("submit",this._Submit);
+
+    //this._onSubmit();
 
     this._loadSongs(this.selectContainer);
     this.inputContainer.value=this.themeList[
@@ -41,12 +43,17 @@ class MenuScreen {
       selectContainer.options.add(new Option(title, _songList[i].songUrl));
     }
   }
-/*
+
   _Submit(event){
     event.preventDefault();
-    document.dispatchEvent(new CustomEvent('toMusic'));
+    document.dispatchEvent(new CustomEvent("ToMusic", {
+        detail: {
+          songValue: this.selectContainer.options[this.selectContainer.selectedIndex].value,
+          gifValue: this.inputContainer.value
+        }
+      }));
   }
-*/
+/*
   _onSubmit() {
     this.formContainer.addEventListener('submit', event => {
       event.preventDefault();
@@ -57,5 +64,5 @@ class MenuScreen {
         }
       }));
     });
-  }
+  }*/
 }
