@@ -11,7 +11,7 @@ class MusicScreen {
   constructor(musicContainer) {
     // TODO(you): Implement the constructor and add fields as necessary.
     this.musicContainer=musicContainer;
-    console.log(musicContainer);
+    //console.log(musicContainer);
     this.gifareaContainer=musicContainer.querySelector("#gifarea");
     this.gifarea=null;
 
