@@ -8,10 +8,11 @@ div #music{
 }
 
 #gifarea {
-    flex-grow: 1;
+    /*flex-grow: 1;*/
     background-color: gray;
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
+    height: 100vh - 70px;
 }
 
 .gif {
@@ -19,7 +20,7 @@ div #music{
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    position: absolute;
+    /*position: absolute;*/
     top: 0;
     right: 0;
     bottom: 0;
