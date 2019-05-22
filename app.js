@@ -33,7 +33,7 @@ class App {
           const imgurl = json.data[index].images.downsized.url;           
           imgURL.push(imgurl);
         }
-        this.musicScreen.init();
+        this.musicScreen.init(imgURL, event.detail.songValue);
         //this.menuScreen.hideErrMsg();
         //this.menuScreen.hide();
         //this.musicScreen.preload(imgURL, event.detail.songValue);
