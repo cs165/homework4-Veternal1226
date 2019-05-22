@@ -7,14 +7,14 @@ TODO(you): Write any additional styles you need here.
     height: 100vh;
 }
 
-#gifarea {
+#gifarea{
     flex-grow: 1;
     background-color: gray;
     position: relative;
     overflow: hidden;
 }
 
-.gif {
+.gif{
     display: flex;
     background-size: cover;
     background-position: center center;
@@ -24,6 +24,14 @@ TODO(you): Write any additional styles you need here.
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+.gif#back{
+    z-index:2;
+}
+
+.gif.inactive{
+    display: none;
 }
 
 #ctrlbar{
