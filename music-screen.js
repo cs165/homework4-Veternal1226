@@ -8,8 +8,16 @@
 //
 // See HW4 writeup for more hints and details.
 class MusicScreen {
-  constructor() {
+  constructor(musicContainer) {
     // TODO(you): Implement the constructor and add fields as necessary.
+    this.musicContainer=musicContainer;
+    this.gifareaContainer=musicContainer.querySelector("gifarea");
+    this.gifarea=null;
+
   }
   // TODO(you): Add methods as necessary.
+  init(imgURL,musicURL){
+    this.gifarea=new GifDisplay(this.gifareaContainer,imgURL);
+
+  }
 }
