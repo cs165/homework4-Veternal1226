@@ -6,6 +6,7 @@ class GifDisplay {
   constructor(gifareaContainer,imgURL) {
     // TODO(you): Implement the constructor and add fields as necessary.
     this.gifareaContainer=gifareaContainer;
+    console.log(gifareaContainer);
     this.gif=gifareaContainer.querySelector("gif");
     this.imgURL=imgURL;
     //this.load();
