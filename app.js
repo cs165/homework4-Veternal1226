@@ -21,7 +21,7 @@ class App {
 
   // TODO(you): Add methods as necessary.
   ToMusic(event){
-    console.log('1');
+    console.log(event.detail);
     this.menuContainer.classList.add("inactive");
     this.musicContainer.classList.remove("inactive");
   }
