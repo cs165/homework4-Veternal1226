@@ -6,6 +6,9 @@ class PlayButton {
   constructor(playContainer) {
     // TODO(you): Implement the constructor and add fields as necessary.
     this.playContainer=playContainer;
+
+    this.changeStatus=this.changeStatus.bind(this);
+
     playContainer.addEventListener("click",changeStatus)
   }
   // TODO(you): Add methods as necessary.
