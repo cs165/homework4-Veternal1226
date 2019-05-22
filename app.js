@@ -32,12 +32,14 @@ class App {
       let imgURLlist=[];
       if(json.data.length>2){
         for(let index in json.data) {
-          const tempImg=json.data[index].images.downsized.url;           
+          const dumpImg=new Image();
+          const tempImg=json.data[index].images.downsized.url;
+          dumpImg.src=tempImg;
           imgURLlist.push(tempImg);
         }
         this.musicScreen.init(imgURLlist, event.detail.songValue);
-        this.errorContainer.classList.add("inactive");//remove error
         //this.musicScreen.preload(imgURLlist, event.detail.songValue);
+        this.errorContainer.classList.add("inactive");//remove error
       }
       else{
         this.errorContainer.classList.remove("inactive");//show error
