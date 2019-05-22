@@ -27,7 +27,7 @@ class App {
     this.menuContainer.classList.add("inactive");
     this.musicContainer.classList.remove("inactive");
 
-    const URL="https://api.giphy.com/v1/gifs/search?q="+encodeURIComponent(event.detail.gifTag)+"&limit=25&rating=g&api_key=FjJaTP04iY5rAwcEASKET51wyx9VZ2V8";
+    const URL="https://api.giphy.com/v1/gifs/search?q="+encodeURIComponent(event.detail.gifTag)+"&limit=25&rating=g&api_key=dc6zaTOxFJmzC";
     const onJsonReady=(json)=>{
       let imgURLlist=[];
       if(json.data.length>2){
