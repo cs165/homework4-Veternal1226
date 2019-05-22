@@ -20,13 +20,13 @@ class App {
   // TODO(you): Add methods as necessary.
   ToMusic(event){
     console.log('1');
-    /*this.menuContainer.classList.add("inactive");
-    this.musicContainer.classList.remove("inactive");*/
+    this.menuContainer.classList.add("inactive");
+    this.musicContainer.classList.remove("inactive");
   }
 
   ToMenu(event){
     console.log('2');
-    /*this.menuContainer.classList.remove("inactive");
-    this.musicContainer.classList.add("inactive");*/
+    this.menuContainer.classList.remove("inactive");
+    this.musicContainer.classList.add("inactive");
   }
 }
