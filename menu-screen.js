@@ -13,7 +13,7 @@ class MenuScreen {
 
     this._loadSongs(this.selectContainer);
     this.inputContainer.value=this.themeList[
-      Math.floor(Math.random()*this.theme.length)
+      Math.floor(Math.random()*this.themeList.length)
     ];
   }
   // TODO(you): Add methods as necessary.
