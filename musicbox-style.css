@@ -26,7 +26,7 @@ TODO(you): Write any additional styles you need here.
     left: 0;
 }
 
-div #ctrlbar{
+#ctrlbar{
     height: 70px;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@ div #ctrlbar{
     background-color: white;
 }
 
-div #ctrlbar #playbutton{
+#ctrlbar #playbutton{
     width: 60px;
     height: 60px;
     background-image:url('./images/play.png');
@@ -43,6 +43,6 @@ div #ctrlbar #playbutton{
     background-repeat: no-repeat;
 }
 
-div #ctrlbar #playbutton.pause{
+#ctrlbar #playbutton.pause{
     background-image:url('./images/pause.png');
 }
