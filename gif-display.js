@@ -11,7 +11,7 @@ class GifDisplay {
     this.backGif=gifareaContainer.querySelector(".gif#back");
     this.imgURL=imgURL;
     this.foreActive=true;
-    this.nowIndex=-1;
+    this.nowIndex=-1;//prevent same gif
 
     this._Kick=this._Kick.bind(this);
 

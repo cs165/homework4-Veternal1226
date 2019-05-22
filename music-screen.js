@@ -13,12 +13,37 @@ class MusicScreen {
     this.musicContainer=musicContainer;
     //console.log(musicContainer);
     this.gifareaContainer=musicContainer.querySelector("#gifarea");
+    this.playContainer=musicContainer.querySelector("#playbutton");
     this.gifarea=null;
+    this.playButton=null;
+    this.audioPlayer=null;
+    this.isPlay=false;
+
+    this._ChangeStatus=this._ChangeStatus.bind(this);
+
+    document.addEventListener("ChangeStatus",this._ChangeStatus);
 
   }
   // TODO(you): Add methods as necessary.
   init(imgURL,musicURL){
     this.gifarea=new GifDisplay(this.gifareaContainer,imgURL);
+    this.playButton=new PlayButton(this.playContainer);
+    this.audioPlayer=new AudioPlayer();
+    this.audioPlayer.setSong(musicURL);
+    this.audioPlayer.setKickCallback(()=>{
+      document.dispatchEvent(new CustomEvent("Kick"));
+    });
+    this.playButton.init();
+  }
 
+  _ChangeStatus(){
+    if(this.isPlay){
+      this.isPlay=false;
+      this.audioPlayer.pause();
+    }
+    else{
+      this.isPlay=true;
+      this.audioPlayer.play();
+    }
   }
 }
