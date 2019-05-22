@@ -10,7 +10,7 @@ class GifDisplay {
     this.gif=gifareaContainer.querySelector(".gif");
     this.imgURL=imgURL;
     //this.load();
-    this.gif.style.backgroundImage="url("+this.imgURL[0]+")";
+    /*this.gif.style.backgroundImage="url("+this.imgURL[0]+")";*/
   }
   // TODO(you): Add methods as necessary.
   /*load(){
