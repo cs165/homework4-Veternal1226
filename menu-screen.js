@@ -16,8 +16,6 @@ class MenuScreen {
 
     this.formContainer.addEventListener("submit",this._Submit);
 
-    //this._onSubmit();
-
     this._loadSongs(this.selectContainer);
     this.inputContainer.value=this.themeList[
       Math.floor(Math.random()*this.themeList.length)
@@ -53,16 +51,5 @@ class MenuScreen {
         }
       }));
   }
-/*
-  _onSubmit() {
-    this.formContainer.addEventListener('submit', event => {
-      event.preventDefault();
-      document.dispatchEvent(new CustomEvent("ToMusic", {
-        detail: {
-          songValue: this.selectContainer.options[this.selectContainer.selectedIndex].value,
-          gifValue: this.inputContainer.value
-        }
-      }));
-    });
-  }*/
+
 }

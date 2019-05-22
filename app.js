@@ -27,7 +27,7 @@ class App {
     this.menuContainer.classList.add("inactive");
     this.musicContainer.classList.remove("inactive");
 
-    const URL="https://api.giphy.com/v1/gifs/search?q="+encodeURIComponent(event.detail.gifTag)+"&limit=25&rating=g&api_key=dc6zaTOxFJmzC";
+    const URL="https://api.giphy.com/v1/gifs/search?q="+encodeURIComponent(event.detail.gifTag)+"&limit=25&rating=g&api_key=FjJaTP04iY5rAwcEASKET51wyx9VZ2V8";
     const onJsonReady=(json)=>{
       let imgURLlist=[];
       if(json.data.length>2){
@@ -36,14 +36,11 @@ class App {
           imgURLlist.push(tempImg);
         }
         this.musicScreen.init(imgURLlist, event.detail.songValue);
-        //this.menuScreen.hideErrMsg();
-        this.errorContainer.classList.add("inactive");
-        //this.menuScreen.hide();
+        this.errorContainer.classList.add("inactive");//remove error
         //this.musicScreen.preload(imgURLlist, event.detail.songValue);
       }
       else{
-        //this.menuScreen.showErrMsg();
-        this.errorContainer.classList.remove("inactive");
+        this.errorContainer.classList.remove("inactive");//show error
       }
     };
 
