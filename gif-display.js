@@ -42,8 +42,8 @@ class GifDisplay {
       this.foreActive=true;
       this.ChangeGif(this.foreGif);
     }
-    this.foreGif.classList.toogle("active");
-    this.backGif.classList.toogle("active");
+    this.foreGif.classList.toggle("active");
+    this.backGif.classList.toggle("active");
   }
 
   /*load(){
