@@ -14,11 +14,12 @@ class App {
     this.ToMenu=this.ToMenu.bind(this);
 
     document.addEventListener("ToMusic",this.ToMusic);
-    document.addEventListener("ToMusic",this.ToMenu);
+    document.addEventListener("ToMenu",this.ToMenu);
   }
 
   // TODO(you): Add methods as necessary.
   ToMusic(){
+    console.log("1");
     /*this.menuContainer.classList.add("inactive");
     this.musicContainer.classList.remove("inactive");*/
   }

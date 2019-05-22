@@ -8,8 +8,11 @@ class MenuScreen {
     this.menuContainer=menuContainer;
     this.selectContainer=menuContainer.querySelector("#song-selector");
     this.inputContainer=menuContainer.querySelector("#query-input");
+    this.formContainer=menuContainer.querySelector("form");
     this.songList={};
     this.themeList=['candy', 'charlie brown', 'computers', 'dance', 'donuts', 'hello kitty', 'flowers', 'nature', 'turtles', 'space'];
+
+    this.formContainer.addEventListener("submit",_Submit);
 
     this._loadSongs(this.selectContainer);
     this.inputContainer.value=this.themeList[
@@ -35,5 +38,9 @@ class MenuScreen {
       const title = _songList[i].artist + ': ' + _songList[i].title;
       selectContainer.options.add(new Option(title, _songList[i].songUrl));
     }
+  }
+
+  _Submit(){
+    document.dispatchEvent(new CustomEvent('toMusic'));
   }
 }
