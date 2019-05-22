@@ -49,7 +49,7 @@ class MenuScreen {
     document.dispatchEvent(new CustomEvent("ToMusic", {
         detail: {
           songValue: this.selectContainer.options[this.selectContainer.selectedIndex].value,
-          gifValue: this.inputContainer.value
+          gifTag: this.inputContainer.value
         }
       }));
   }

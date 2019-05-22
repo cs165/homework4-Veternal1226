@@ -11,12 +11,14 @@ class App {
     const musicContainer=document.querySelector("#music");
     this.musicContainer=musicContainer;
     this.musicScreen=new MusicScreen(musicContainer);
+    const errorContainer=document.querySelector("#error");
+    this.errorContainer=errorContainer;
 
     this.ToMusic=this.ToMusic.bind(this);
-    this.ToMenu=this.ToMenu.bind(this);
+    /*this.ToMenu=this.ToMenu.bind(this);*/
 
     document.addEventListener("ToMusic",this.ToMusic);
-    document.addEventListener("ToMenu",this.ToMenu);
+    /*document.addEventListener("ToMenu",this.ToMenu);*/
   }
 
   // TODO(you): Add methods as necessary.
@@ -25,20 +27,23 @@ class App {
     this.menuContainer.classList.add("inactive");
     this.musicContainer.classList.remove("inactive");
 
-    const URL = "https://api.giphy.com/v1/gifs/search?q=" + encodeURIComponent(event.detail.gifValue) + "&limit=25&rating=g&api_key=dc6zaTOxFJmzC";
-    const onJsonReady = (json) => {
-      let imgURL = [];
-      if(json.data.length > 2) {
+    const URL="https://api.giphy.com/v1/gifs/search?q="+encodeURIComponent(event.detail.gifTag)+"&limit=25&rating=g&api_key=dc6zaTOxFJmzC";
+    const onJsonReady=(json)=>{
+      let imgURLlist=[];
+      if(json.data.length>2){
         for(let index in json.data) {
-          const imgurl = json.data[index].images.downsized.url;           
-          imgURL.push(imgurl);
+          const tempImg=json.data[index].images.downsized.url;           
+          imgURLlist.push(tempImg);
         }
-        this.musicScreen.init(imgURL, event.detail.songValue);
+        this.musicScreen.init(imgURLlist, event.detail.songValue);
         //this.menuScreen.hideErrMsg();
+        this.errorContainer.classList.add("inactive");
         //this.menuScreen.hide();
-        //this.musicScreen.preload(imgURL, event.detail.songValue);
-      }else {
+        //this.musicScreen.preload(imgURLlist, event.detail.songValue);
+      }
+      else{
         //this.menuScreen.showErrMsg();
+        this.errorContainer.classList.remove("inactive");
       }
     };
 

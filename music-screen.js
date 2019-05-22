@@ -25,8 +25,8 @@ class MusicScreen {
 
   }
   // TODO(you): Add methods as necessary.
-  init(imgURL,musicURL){
-    this.gifarea=new GifDisplay(this.gifareaContainer,imgURL);
+  init(imgURLlist,musicURL){
+    this.gifarea=new GifDisplay(this.gifareaContainer,imgURLlist);
     this.playButton=new PlayButton(this.playContainer);
     this.audioPlayer=new AudioPlayer();
     this.audioPlayer.setSong(musicURL);
