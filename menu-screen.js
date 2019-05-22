@@ -12,7 +12,7 @@ class MenuScreen {
     this.songList={};
     this.themeList=['candy', 'charlie brown', 'computers', 'dance', 'donuts', 'hello kitty', 'flowers', 'nature', 'turtles', 'space'];
 
-    this._Submit=this._Submit.bind(this);
+    //this._Submit=this._Submit.bind(this);
 
     this.formContainer.addEventListener("submit",this._Submit);
 
