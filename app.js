@@ -18,13 +18,14 @@ class App {
   }
 
   // TODO(you): Add methods as necessary.
-  ToMusic(){
-    console.log("1");
+  ToMusic(event){
+    console.log(event.detail.gifValue);
     /*this.menuContainer.classList.add("inactive");
     this.musicContainer.classList.remove("inactive");*/
   }
 
-  ToMenu(){
+  ToMenu(event){
+    console.log('1');
     /*this.menuContainer.classList.remove("inactive");
     this.musicContainer.classList.add("inactive");*/
   }
