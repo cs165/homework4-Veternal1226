@@ -6,7 +6,7 @@ class MenuScreen {
   constructor(menuContainer) {
     // TODO(you): Implement the constructor and add fields as necessary.
     this.menuContainer=menuContainer;
-    this.selectContainer=menuContainer.queryselector("#song-selector");
+    this.selectContainer=menuContainer.querySelector("#song-selector");
     this.songList={};
     this._loadSongs(selectContainer);
   }
