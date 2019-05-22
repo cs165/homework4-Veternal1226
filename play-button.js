@@ -9,7 +9,7 @@ class PlayButton {
 
     this.changeStatus=this.changeStatus.bind(this);
 
-    playContainer.addEventListener("click",changeStatus)
+    playContainer.addEventListener("click",this.changeStatus)
   }
   // TODO(you): Add methods as necessary.
   init(){
