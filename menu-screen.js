@@ -8,7 +8,7 @@ class MenuScreen {
     this.menuContainer=menuContainer;
     this.selectContainer=menuContainer.querySelector("#song-selector");
     this.songList={};
-    this._loadSongs(selectContainer);
+    this._loadSongs(this.selectContainer);
   }
   // TODO(you): Add methods as necessary.
   _loadSongs(selectContainer) {
