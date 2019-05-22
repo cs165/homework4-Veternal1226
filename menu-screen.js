@@ -48,7 +48,7 @@ class MenuScreen {
   }
 */
   _onSubmit() {
-    this.formElement.addEventListener('submit', event => {
+    this.formContainer.addEventListener('submit', event => {
       event.preventDefault();
       document.dispatchEvent(new CustomEvent("ToMusic", {
         detail: {
