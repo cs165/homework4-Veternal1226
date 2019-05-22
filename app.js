@@ -5,9 +5,11 @@
 class App {
   constructor() {
     // TODO(you): Implement the constructor and add fields as necessary.
-    this.menuContainer=document.querySelector("#menu");
+    const menuContainer=document.querySelector("#menu");
+    this.menuContainer=menuContainer;
     this.menuScreen=new MenuScreen(menuContainer);
-    this.musicContainer=document.querySelector("#music");
+    const musicContainer=document.querySelector("#music");
+    this.musicContainer=musicContainer;
     this.musicScreen=new MusicScreen(musicContainer);
 
     this.ToMusic=this.ToMusic.bind(this);
